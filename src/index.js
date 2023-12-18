@@ -18,11 +18,8 @@ app.use(morgan("tiny"));
 app.use("/todo", todoRoute);
 app.use("/user", userRoute);
 
-// console.log(process.env.SECRET)
-
 const url =
   "mongodb+srv://jaiswalshashank123:jaiswal12345@cube-db.znkgjx4.mongodb.net/";
 mongoose.connect(url).then(() => {
-  console.log("starting on port 8080");
   app.listen(8080);
 }); 
